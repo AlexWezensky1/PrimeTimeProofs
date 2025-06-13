@@ -4,7 +4,7 @@ This is the repository for all queries used on our channel PrimeTimeProofs: http
 Prime Time Proofs is a channel dedicated to verifying sports statistics from videos, tiktoks, twitter, and TV with the help of SQL. We've made our own database with (almost) every NFL stat in existence with the help of nflreadr and Pro Football Reference.
 
 Back-end database:  
-Azure SQL Database - Free Tier  
+-Azure SQL Database - Free Tier  
 -Microsoft Entra for validation
 
 Lesson Learned:  
