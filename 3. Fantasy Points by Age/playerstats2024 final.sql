@@ -3,8 +3,8 @@ select * from (
 	select *, ROW_NUMBER() over (partition by age order by totalppr desc) as rankno	from (
 		select season, birth_date, p.position,
 			(CONVERT(int,CONVERT(char(8),@now,112))-CONVERT(char(8),birth_date,112))/10000 as age, 
-			player_display_name, sum(fantasy_points_ppr) as totalppr
-		from tblPlayerStats ps
+			player_display_name, round(sum(fantasy_points_ppr),1) as totalppr
+		from tblStats2024 ps
 		join tblPlayers p
 		on p.gsis_id = ps.player_id
 		where season = 2024
